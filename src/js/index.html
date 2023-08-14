@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lanchonete DB</title>
+    <style>
+      body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+select:hover, button:hover {
+    background-color: #0056b3;
+}
+
+select {
+    width: 100%;
+    max-width: 300px;
+}
+
+#cart, #total {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#total {
+    font-size: 18px;
+    text-align: center;
+}
+
+#error {
+    color: red;
+    margin-top: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Lanchonete DB</h1>
+    <label for="items">Selecione os itens:</label>
+    <select id="items">
+        <option value="">Selecione um item</option>
+        <option value="cafe">Café</option>
+       <option value="chantily">chantily(extra do Café)</option>
+       <option value="suco">Suco Natural</option>
+       <option value="sanduiche">Sanduíche</option>
+      <option value="queijo">Queijo (extra do Sanduíche)</option>
+      <option value="salgado">Salgado</option>
+      <option value="combo1">1 Suco e 1 Sanduíche</option>
+      <option value="combo2">1 Café e 1 Sanduíche</option>
+
+    </select>
+    <button id="addBtn">Adicionar Item</button>
+    <div id="cart"></div>
+    <label for="payment">Forma de pagamento:</label>
+    <select id="payment">
+        <option value="">Selecione uma forma de pagamento</option>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="debito">Debito</option>
+        <option value="credito">Credito</option>
+    </select>
+    <button id="checkoutBtn">Finalizar Compra</button>
+    <div id="total"></div>
+    <script src="index.js"></script>
+</body>
+</html>
